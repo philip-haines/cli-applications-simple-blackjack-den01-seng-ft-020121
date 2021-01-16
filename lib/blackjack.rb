@@ -32,24 +32,24 @@ def initial_round
   return cards
 end
 
-def invalid_command
-  puts "Please enter a valid command"
-end
-
 def hit?(card_total)
   prompt_user
   user_input = get_user_input
+  
   if user_input == "h"
-    card_total += deal_card 
+    card_total += deal_card
+
   elsif user_input == "s"
     card_total
   else
     invalid_command
-    puts prompt_user
   end
 end
 
-
+def invalid_command
+  puts "Please enter a valid command"
+  
+end
 
 #####################################################
 # get every test to pass before coding runner below #
